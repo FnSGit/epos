@@ -19,6 +19,7 @@
     </properties>
 
     <dependencies>
+        <!--       spring-boot-starter 场景启动器-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -49,6 +50,7 @@
 
     <build>
         <plugins>
+            <!--    将应用打包成可执行jar包-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
