@@ -27,7 +27,7 @@ public String index() {
 
     @RequestMapping("main")
     String firstPage() {
-        System.out.println("回到主页");
+        System.out.println("跳转进入到主页");
         return "堕落小龙虾(海鲜·香宁巷店)外卖_堕落小龙虾(海鲜·香宁巷店)菜单_电话_堕落小龙虾(海鲜·香宁巷店)网上订餐 - 遵义市汇川区香港路香宁巷金城公寓3号.html";
     }
 
