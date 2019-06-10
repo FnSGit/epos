@@ -18,6 +18,20 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <build>
+        <plugins>
+            <!--    将应用打包成可执行jar包-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!--    新增配置 20190519 -->
+    <packaging>war</packaging>
+
+
     <dependencies>
         <!--       spring-boot-starter 场景启动器-->
         <dependency>
@@ -31,6 +45,11 @@
             <scope>test</scope>
         </dependency>
 
+        <!--日志模块-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
 <!--        引入servlet-->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -45,21 +64,21 @@
             <scope>provided</scope>
         </dependency>
 
+        <!--        配置文件处理器，配置文件绑定会有提示-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
 
+        <!--thymeleaf 前台html动态渲染框架-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <!--    将应用打包成可执行jar包-->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
-<!--    新增配置 20190519 -->
-    <packaging>war</packaging>
 
 
 </project>
