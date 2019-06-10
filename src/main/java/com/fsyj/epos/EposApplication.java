@@ -9,7 +9,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 public class EposApplication extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(EposApplication.class);
+        builder.sources(this.getClass());
+        return super.configure(builder);
     }
 
     public static void main(String[] args) {
